@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unsere Reha-Website</title>
+    <style>
+      /* Allgemeines Styling */
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        background-color: #5f8e69;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        letter-spacing: 1px;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #ff6347;
+      }
+
+      /* Strukturierte Abschnitte */
+      section {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+      }
+
+      section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* Stil für Listen */
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      li {
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      /* Bilder im Stundenplan und Ferienbereich */
+      .stundenplan-bild {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 20px auto;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .stundenplan-bild:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Vollbildmodus */
+      .vollbild {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: opacity 0.3s ease;
+      }
+
+      .vollbild img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 999;
+        transition: opacity 0.3s ease;
+      }
+
+      /* Links */
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: firebrick;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>:) Reha</h1>
+    </header>
+
+    <nav>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#aktuelles">Aktuelles</a>
+      <a href="#geburtstage">Geburtstage</a>
+      <a href="#stundenplan">Stundenplan</a>
+      <a href="#ferien">Ferien</a>
+      <a href="#links">Links</a>
+      <a href="#kontakte">Kontakte</a>
+    </nav>
+
+    <section id="ueber-uns">
+      <h2>Über uns</h2>
+      <p>Dies ist die inoffizielle und von Lernenden betriebene Info-Seite für die Reha-Vorbereitungslehrgänge im BFW-Hamburg 2025.</p> 
+     </section>
+
+    <section id="aktuelles">
+      <h2>Aktuelles</h2>
+      <p>Am 14.04 wird die Gruppe durch neue Mitglieder des 3.monatigen RVL erweitert. </p>
+    </section>
+
+    <section id="geburtstage">
+      <h2>Geburtstage</h2>
+      <p>Hier sind die Geburtstagsdaten.</p>
+      <ul>
+        <li>Daniel - 29. Februar</li>
+        <li>Sylvia - 23. März</li>
+        <li>Edmond - 11. April</li>
+        <li>Merle - 19. Juli</li>
+        <li>Yasmine - 16. August</li>
+        <li>Tjark - 3. November</li>
+        <li>Leslie - 14. Dezember</li>
+      </ul>
+    </section>
+
+    <section id="stundenplan">
+      <h2>Stundenplan</h2>
+      <p>Hier könnt ihr den Stundenplan einsehen.</p>
+      <img
+        src="stundenplan.jpg"
+        alt="Stundenplanbild"
+        class="stundenplan-bild"
+        id="bild1"
+      />
+    </section>
+
+    <section id="ferien">
+      <h2>Ferien</h2>
+      <p>In diesem Abschnitt könnt ihr unsere Ferienzeiten finden.</p>
+      <img
+        src="dein-bild.jpg"
+        alt="Ferienbild"
+        class="stundenplan-bild"
+        id="bild2"
+      />
+    </section>
+
+    <section id="links">
+      <h2>Wichtige Links</h2>
+      <ul>
+        <li><a href="https://www.bfw-hamburg.de/">BFW-Hamburg</a></li>
+        <li><a href="https://www.ihk.de/">Handelskammer</a></li><br>
+        <li><a href="https://www.easy4me.info/">Easy4me</a></li>
+        <li><a href="https://10fastfingers.com/typing-test/german">10 Finger tippen</a></li>
+        <li><a href="https://www.youtube.com/channel/UCy0FxMgGUlRnkxCoNZUNRQQ">Lehrer Schmidt</a></li>
+      </ul>
+    </section>
+
+    
+    <section id="kontakte">
+        <h2>Kontakte</h2>
+        <p>In diesem Abschnitt könnt ihr wichtige e-Mail Kontakte finden.</p>
+        <ul>
+          <li style="color: #516b87;font-size: larger;">Ausbilder*innen</li>
+          <li>Kornelia.Wangelin@cjd.de</li>
+          <li>Thomas.Liebegott@cjd.de</li>
+          <li>Frederik.Wilmshoefer@cjd.de</li>
+          <li>Sandra.Schurwanz@cjd.de</li>
+          <br><br> <br>
+          <li style="color: rgb(236, 146, 146);font-size: x-large;">WICHTIG für die Krankmeldung!!</li></li>
+          <li>Rehaservice.bfw@cjd.de</li>
+          <br><li style="color: #556d87;font-size: larger;">Koordinator*in</li>
+          <li>Anja.Neumann@cjd.de</li>
+        </ul>
+      </section>
+
+    <footer>
+      <p>&copy;2025 Edmond Schreiber</p>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="vollbild" id="vollbild">
+      <img src="dein-bild.jpg" alt="Vollbildbild" id="vollbildbild" />
+    </div>
+
+    <script>
+      const bild1 = document.getElementById("bild1");
+      const bild2 = document.getElementById("bild2");
+      const vollbild = document.getElementById("vollbild");
+      const overlay = document.getElementById("overlay");
+      const vollbildbild = document.getElementById("vollbildbild");
+
+      function bildVollbildAnzeigen(bild) {
+        vollbild.style.display = "flex";
+        overlay.style.display = "block";
+        vollbildbild.src = bild.src;
+      }
+
+      bild1.onclick = function () {
+        bildVollbildAnzeigen(bild1);
+      };
+
+      bild2.onclick = function () {
+        bildVollbildAnzeigen(bild2);
+      };
+
+      overlay.onclick = function () {
+        vollbild.style.display = "none";
+        overlay.style.display = "none";
+      };
+
+      vollbildbild.onclick = function () {
+        vollbild.style.display = "none";
+        overlay.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
